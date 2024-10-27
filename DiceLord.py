@@ -13,12 +13,14 @@ private_key = os.getenv('DiceLord_KEY')
 guildid = os.getenv('DiceLord_GUILD')
 # endregion
 
+
 # region Variables
 Oneshot = int(os.getenv("ONESHOT_ROLE_ID"))  # Ensure it's an integer
 Campaign = int(os.getenv("CAMPAIGN_ROLE_ID"))  # Ensure it's an integer
 
 Channel = os.getenv('Roller_Channel_ID')  # Load the channel ID
 # endregion
+
 
 # region add things like on_message here
 class MyClient(discord.Client):
@@ -148,6 +150,7 @@ async def send_roles(interaction):
     await interaction.response.send_message(
         "Click a button to receive or remove a role. Remember Campaign role is for Jonathan's campaign and should be agreed with him to recieve:", view=view)
 # endregion
+
 
 # region Cleanup
 @tree.command(
